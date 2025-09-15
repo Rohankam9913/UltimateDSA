@@ -25,7 +25,7 @@ public:
             int u = vec[0];
             int v = vec[1];
 
-            adj[u].push_back(v);
+            adj[v].push_back(u);
         }
 
         vector<bool>vis(numCourses,false);
@@ -53,8 +53,8 @@ public:
             int u = vec[0];
             int v = vec[1];
 
-            adj[u].push_back(v);
-            indegree[v]++;
+            adj[v].push_back(u);
+            indegree[u]++;
         }
 
         queue<int>que;
