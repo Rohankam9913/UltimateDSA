@@ -56,7 +56,7 @@ public:
             Union(u,v);
         }
 
-        return m - componentCount;
+        return componentCount-1;
     }
 };
 
@@ -99,7 +99,7 @@ public:
             }
         }
 
-        return m-componentCount;
+        return componentCount-1;
     }
 };
 
@@ -150,6 +150,6 @@ public:
             }
         }
 
-        return m-componentCount;
+        return componentCount-1;
     }
 };
