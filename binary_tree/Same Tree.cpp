@@ -46,24 +46,24 @@ public:
             que2.pop();
 
             if(first->val != second->val) {
-                return true;
+                return false;
             }
 
             if(first->left && second->left) {
                 que1.push(first->left);
                 que2.push(second->left);
-            } else if(!first->left || !second->left){
-                returnn false;
+            } else if(first->left || second->left){
+                return false;
             }
 
             if(first->right && second->right) {
                 que1.push(first->right);
                 que2.push(second->right);
-            } else if(!first->right || !second->right) {
+            } else if(first->right || second->right) {
                 return false;
             }
         }
 
-        return true;
+        return que1.empty() && que2.empty();
     }
 };
